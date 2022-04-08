@@ -1,0 +1,41 @@
+﻿@model List<StronglyTypedView.Models.Employees>
+
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Home</h2>
+
+@*@{
+        var emp = ViewBag.empdata;
+        var emp2 = (StronglyTypedView.Models.Employees)ViewData["empdata"];
+    }*@
+
+@*<h2>View Bag Data:</h2>
+
+    <h2>@emp.Id</h2>
+    <h2>@emp.Name</h2>
+    <h2>@emp.Designation</h2>
+
+    <h2>View Data:</h2>
+
+    <h2>@emp2.Id</h2>
+    <h2>@emp2.Name</h2>
+    <h2>@emp2.Designation</h2>*@
+
+<h2>Strongly Typed Data:</h2>
+
+@*<h2>@Model.Id</h2>
+    <h2>@Model.Name</h2>
+    <h2>@Model.Designation</h2>*@
+
+@{
+    foreach (var emp in Model)
+    {
+        <li>@emp.Id</li>
+        <li>@emp.Name</li>
+        <li>@emp.Designation</li>
+    }
+}
+
